@@ -11,8 +11,12 @@ RSpec.describe LatestVersion do
 
     shared_examples "returns a MAJOR.MINOR.PATCH version" do
       specify do
-        expect(described_class.call(library_name)).to match(/\A\d+\.\d+\.\d+\z/)
+        expect(described_class.call(library_name)).to match(/\A\d+\.\d+\.\d+(\.\d+)?\z/)
       end
+    end
+
+    context "rails" do
+      it_behaves_like "returns a MAJOR.MINOR.PATCH version"
     end
 
     context "ruby" do
