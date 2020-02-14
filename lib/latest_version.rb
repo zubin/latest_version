@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-Dir[File.expand_path('latest_version/**/*.rb', __dir__)].each(&method(:require))
-
 require 'net/http'
 require 'uri'
 
@@ -25,6 +23,10 @@ module LatestVersion
 
   def self.call(library)
     LIBRARIES.fetch(library.to_sym) { raise UnknownLibraryError, library }.call
+  end
+
+  def self.supported_libraries
+    LIBRARIES.keys.sort
   end
 
   private_class_method def self.find(url:, regex:)
