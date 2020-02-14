@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Zubin Henner"]
   spec.email         = ['zubin@users.noreply.github.com']
 
-  spec.summary       = "Utility for looking up latest versions of open source libraries"
+  spec.summary       = "Look up latest versions of open source libraries from your shell."
   spec.homepage      = 'https://github.com/zubin/latest_version'
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
