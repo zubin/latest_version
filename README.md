@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/zubin/latest_version.svg?branch=master)](https://travis-ci.org/zubin/latest_version)
 
-Utility for looking up latest versions of open source libraries
+Look up latest versions of open source libraries from your shell.
 
 ## Installation
 
