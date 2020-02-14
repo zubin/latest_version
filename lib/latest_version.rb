@@ -1,8 +1,17 @@
 # frozen_string_literal: true
 
-require "latest_version/version"
+require 'net/http'
+require 'uri'
+
+Dir[File.expand_path('latest_version/**/*.rb', __dir__)].each(&method(:require))
 
 module LatestVersion
-  class Error < StandardError; end
-  # Your code goes here...
+  LIBRARIES = {
+    'ruby' => Libraries::Ruby,
+  }.freeze
+  private_constant :LIBRARIES
+
+  def self.call(library)
+    LIBRARIES.fetch(library) { raise NotImplementedError, library }.call
+  end
 end
