@@ -6,16 +6,16 @@ require 'uri'
 module LatestVersion
   LIBRARIES = {
     python: lambda {
-      find(
+      find_text(
         url: 'https://www.python.org/',
         regex: %r{<p>Latest: <a href="/downloads/release/python-\d+/">Python (\d+\.\d+\.\d+)</a></p>},
       )
     },
     rails: lambda {
-      find(url: 'https://rubyonrails.org/', regex: /Latest version &mdash; Rails ([\d\.]+)/)
+      find_text(url: 'https://rubyonrails.org/', regex: /Latest version &mdash; Rails ([\d\.]+)/)
     },
     ruby: lambda {
-      find(url: 'https://www.ruby-lang.org/en/downloads/', regex: /current stable version is (\d+\.\d+\.\d+)\./)
+      find_text(url: 'https://www.ruby-lang.org/en/downloads/', regex: /current stable version is (\d+\.\d+\.\d+)\./)
     },
   }.freeze
   UnknownLibraryError = Class.new(StandardError)
@@ -29,7 +29,7 @@ module LatestVersion
     LIBRARIES.keys.sort
   end
 
-  private_class_method def self.find(url:, regex:)
+  private_class_method def self.find_text(url:, regex:)
     Net::HTTP.get(URI.parse(url))[regex, 1]
   end
 end
