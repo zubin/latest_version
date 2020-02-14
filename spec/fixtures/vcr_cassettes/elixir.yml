@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/elixir-lang/elixir/releases/latest
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.github.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 14 Feb 2020 18:57:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - GitHub.com
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '48'
+      X-Ratelimit-Reset:
+      - '1581709200'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      - Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"db0437d897abe30b8eb6cc9f739e7395"
+      Last-Modified:
+      - Mon, 10 Feb 2020 11:53:45 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - 4550:6C20:C5CDC:E0948:5E46ED8B
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/elixir-lang/elixir/releases/23529861","assets_url":"https://api.github.com/repos/elixir-lang/elixir/releases/23529861/assets","upload_url":"https://uploads.github.com/repos/elixir-lang/elixir/releases/23529861/assets{?name,label}","html_url":"https://github.com/elixir-lang/elixir/releases/tag/v1.10.1","id":23529861,"node_id":"MDc6UmVsZWFzZTIzNTI5ODYx","tag_name":"v1.10.1","target_commitish":"master","name":"","draft":false,"author":{"login":"josevalim","id":9582,"node_id":"MDQ6VXNlcjk1ODI=","avatar_url":"https://avatars0.githubusercontent.com/u/9582?v=4","gravatar_id":"","url":"https://api.github.com/users/josevalim","html_url":"https://github.com/josevalim","followers_url":"https://api.github.com/users/josevalim/followers","following_url":"https://api.github.com/users/josevalim/following{/other_user}","gists_url":"https://api.github.com/users/josevalim/gists{/gist_id}","starred_url":"https://api.github.com/users/josevalim/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/josevalim/subscriptions","organizations_url":"https://api.github.com/users/josevalim/orgs","repos_url":"https://api.github.com/users/josevalim/repos","events_url":"https://api.github.com/users/josevalim/events{/privacy}","received_events_url":"https://api.github.com/users/josevalim/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2020-02-10T11:42:26Z","published_at":"2020-02-10T11:53:45Z","assets":[{"url":"https://api.github.com/repos/elixir-lang/elixir/releases/assets/17920068","id":17920068,"node_id":"MDEyOlJlbGVhc2VBc3NldDE3OTIwMDY4","name":"Docs.zip","label":null,"uploader":{"login":"josevalim","id":9582,"node_id":"MDQ6VXNlcjk1ODI=","avatar_url":"https://avatars0.githubusercontent.com/u/9582?v=4","gravatar_id":"","url":"https://api.github.com/users/josevalim","html_url":"https://github.com/josevalim","followers_url":"https://api.github.com/users/josevalim/followers","following_url":"https://api.github.com/users/josevalim/following{/other_user}","gists_url":"https://api.github.com/users/josevalim/gists{/gist_id}","starred_url":"https://api.github.com/users/josevalim/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/josevalim/subscriptions","organizations_url":"https://api.github.com/users/josevalim/orgs","repos_url":"https://api.github.com/users/josevalim/repos","events_url":"https://api.github.com/users/josevalim/events{/privacy}","received_events_url":"https://api.github.com/users/josevalim/received_events","type":"User","site_admin":false},"content_type":"application/zip","state":"uploaded","size":2116982,"download_count":52,"created_at":"2020-02-10T11:53:15Z","updated_at":"2020-02-10T11:53:45Z","browser_download_url":"https://github.com/elixir-lang/elixir/releases/download/v1.10.1/Docs.zip"},{"url":"https://api.github.com/repos/elixir-lang/elixir/releases/assets/17920070","id":17920070,"node_id":"MDEyOlJlbGVhc2VBc3NldDE3OTIwMDcw","name":"Precompiled.zip","label":null,"uploader":{"login":"josevalim","id":9582,"node_id":"MDQ6VXNlcjk1ODI=","avatar_url":"https://avatars0.githubusercontent.com/u/9582?v=4","gravatar_id":"","url":"https://api.github.com/users/josevalim","html_url":"https://github.com/josevalim","followers_url":"https://api.github.com/users/josevalim/followers","following_url":"https://api.github.com/users/josevalim/following{/other_user}","gists_url":"https://api.github.com/users/josevalim/gists{/gist_id}","starred_url":"https://api.github.com/users/josevalim/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/josevalim/subscriptions","organizations_url":"https://api.github.com/users/josevalim/orgs","repos_url":"https://api.github.com/users/josevalim/repos","events_url":"https://api.github.com/users/josevalim/events{/privacy}","received_events_url":"https://api.github.com/users/josevalim/received_events","type":"User","site_admin":false},"content_type":"application/zip","state":"uploaded","size":5672280,"download_count":1242,"created_at":"2020-02-10T11:53:24Z","updated_at":"2020-02-10T11:53:45Z","browser_download_url":"https://github.com/elixir-lang/elixir/releases/download/v1.10.1/Precompiled.zip"}],"tarball_url":"https://api.github.com/repos/elixir-lang/elixir/tarball/v1.10.1","zipball_url":"https://api.github.com/repos/elixir-lang/elixir/zipball/v1.10.1","body":"###
+        1. Bug fixes\r\n\r\n#### Elixir\r\n\r\n  * [Code] Do not emit invalid code
+        when formatting `nil`, `false`, and `true` keys in maps\r\n  * [Kernel] Ensure
+        `with` clauses properly unpack \"implicit guards\" (such as matching on the
+        struct name)\r\n  * [Kernel] Do not warn if commas are used by themselves
+        in `~w`/`~W` sigils\r\n  * [Kernel] Do not validate the `:line` option in
+        quote (the validation has been moved to v1.11 to give users more time to update
+        their code)\r\n  * [Module] Ensure the code verifier handles the `:erlang.size/1`
+        guard properly\r\n\r\n#### Logger\r\n\r\n  * [Logger] Properly handle the
+        `report_cb/2` option from Erlang\r\n  * [Logger] Fix truncation for multi-byte
+        characters\r\n  * [Logger] Do not rebroadcast messages from remote nodes as
+        this is now taken care by Erlang''s logger\r\n\r\n#### ExUnit\r\n\r\n  * [ExUnit]
+        Ensure `assert_receive` produces valid exception messages in case of errors\r\n\r\n####
+        Mix\r\n\r\n  * [mix release] Make sure the install command (Window specific)
+        works on paths with spaces in the name\r\n  * [mix release] Allow using `remote`
+        and `rpc` commands with `Application.compile_env/3`\r\n\r\n### Checksums\r\n\r\n  *
+        Precompiled.zip SHA1: 606ffaff6c7c3d278d7daa1fee653aa8183f225f\r\n  * Precompiled.zip
+        SHA512: e8809aff909ca6e2271493690a6a095959e551f6d04e2d384ead0d6cfde23a3707492b53563b9a78080509b44728a63645dc37be108cd6ea3f9501f5d616fe1d\r\n  *
+        Docs.zip SHA1: bb050e0b56a2d32562f7c876f8eed53846b857fe\r\n  * Docs.zip SHA512:
+        be8ffec17cd15a439f78857eee615793d4d22a9b38b34df94d8546bb0f0b5745974115337cadcefebc82feef62d6f2d5a19f50f563f4efc9c9e4543815ccf85b\r\n"}'
+    http_version: null
+  recorded_at: Fri, 14 Feb 2020 18:57:16 GMT
+recorded_with: VCR 5.1.0

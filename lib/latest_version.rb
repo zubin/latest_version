@@ -1,22 +1,21 @@
 # frozen_string_literal: true
 
+require 'json'
 require 'net/http'
 require 'uri'
 
 module LatestVersion
   LIBRARIES = {
+    elixir: -> { latest_github_release(repo: 'elixir-lang/elixir') },
     python: lambda {
-      find(
+      find_text(
         url: 'https://www.python.org/',
         regex: %r{<p>Latest: <a href="/downloads/release/python-\d+/">Python (\d+\.\d+\.\d+)</a></p>},
       )
     },
-    rails: lambda {
-      find(url: 'https://rubyonrails.org/', regex: /Latest version &mdash; Rails ([\d\.]+)/)
-    },
-    ruby: lambda {
-      find(url: 'https://www.ruby-lang.org/en/downloads/', regex: /current stable version is (\d+\.\d+\.\d+)\./)
-    },
+    rails: -> { latest_github_release(repo: 'rails/rails') },
+    ruby: -> { latest_github_tag(repo: 'ruby/ruby').gsub('_', '.') },
+    rust: -> { latest_github_tag(repo: 'rust-lang/rust') },
   }.freeze
   UnknownLibraryError = Class.new(StandardError)
   private_constant :LIBRARIES
@@ -29,7 +28,18 @@ module LatestVersion
     LIBRARIES.keys.sort
   end
 
-  private_class_method def self.find(url:, regex:)
+  private_class_method def self.find_text(url:, regex:)
     Net::HTTP.get(URI.parse(url))[regex, 1]
+  end
+
+  private_class_method def self.latest_github_release(repo:)
+    json = Net::HTTP.get(URI("https://api.github.com/repos/#{repo}/releases/latest"))
+    JSON.parse(json, symbolize_names: true).fetch(:tag_name).gsub(/^v/, '')
+  end
+
+  private_class_method def self.latest_github_tag(repo:)
+    json = Net::HTTP.get(URI("https://api.github.com/repos/#{repo}/tags"))
+    tags = JSON.parse(json, symbolize_names: true)
+    tags.map { |tag| tag.fetch(:name).gsub(/^v/, '') }.reject { |name| name[/[a-z]/i] }.max
   end
 end
