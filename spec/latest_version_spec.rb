@@ -18,5 +18,11 @@ RSpec.describe LatestVersion do
     context "ruby" do
       it_behaves_like "returns a MAJOR.MINOR.PATCH version"
     end
+
+    context "unknown", vcr: false do
+      it "raises an error" do
+        expect { described_class.call(library_name) }.to raise_error(described_class::UnknownLibraryError, library_name)
+      end
+    end
   end
 end

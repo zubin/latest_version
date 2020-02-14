@@ -9,9 +9,10 @@ module LatestVersion
   LIBRARIES = {
     'ruby' => Libraries::Ruby,
   }.freeze
+  UnknownLibraryError = Class.new(StandardError)
   private_constant :LIBRARIES
 
   def self.call(library)
-    LIBRARIES.fetch(library) { raise NotImplementedError, library }.call
+    LIBRARIES.fetch(library) { raise UnknownLibraryError, library }.call
   end
 end
