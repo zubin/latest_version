@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "latest_version/version"
 
 module LatestVersion
