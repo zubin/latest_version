@@ -6,6 +6,7 @@ require 'uri'
 
 module LatestVersion
   LIBRARIES = {
+    elixir: -> { latest_github_release(repo: 'elixir-lang/elixir') },
     python: lambda {
       find_text(
         url: 'https://www.python.org/',
