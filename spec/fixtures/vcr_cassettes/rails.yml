@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Feb 2020 18:15:20 GMT
+      - Fri, 14 Feb 2020 18:44:09 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,9 +33,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '41'
+      - '58'
       X-Ratelimit-Reset:
-      - '1581705554'
+      - '1581709200'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
@@ -66,7 +66,7 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - 4447:54AB:C3138:DC0D1:5E46E3B8
+      - 445A:6C20:C08E4:DAA96:5E46EA79
     body:
       encoding: ASCII-8BIT
       string: '{"url":"https://api.github.com/repos/rails/rails/releases/22333644","assets_url":"https://api.github.com/repos/rails/rails/releases/22333644/assets","upload_url":"https://uploads.github.com/repos/rails/rails/releases/22333644/assets{?name,label}","html_url":"https://github.com/rails/rails/releases/tag/v6.0.2.1","id":22333644,"node_id":"MDc6UmVsZWFzZTIyMzMzNjQ0","tag_name":"v6.0.2.1","target_commitish":"master","name":"6.0.2.1","draft":false,"author":{"login":"rafaelfranca","id":47848,"node_id":"MDQ6VXNlcjQ3ODQ4","avatar_url":"https://avatars3.githubusercontent.com/u/47848?v=4","gravatar_id":"","url":"https://api.github.com/users/rafaelfranca","html_url":"https://github.com/rafaelfranca","followers_url":"https://api.github.com/users/rafaelfranca/followers","following_url":"https://api.github.com/users/rafaelfranca/following{/other_user}","gists_url":"https://api.github.com/users/rafaelfranca/gists{/gist_id}","starred_url":"https://api.github.com/users/rafaelfranca/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rafaelfranca/subscriptions","organizations_url":"https://api.github.com/users/rafaelfranca/orgs","repos_url":"https://api.github.com/users/rafaelfranca/repos","events_url":"https://api.github.com/users/rafaelfranca/events{/privacy}","received_events_url":"https://api.github.com/users/rafaelfranca/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2019-12-18T19:07:58Z","published_at":"2019-12-18T19:17:34Z","assets":[],"tarball_url":"https://api.github.com/repos/rails/rails/tarball/v6.0.2.1","zipball_url":"https://api.github.com/repos/rails/rails/zipball/v6.0.2.1","body":"##
@@ -82,5 +82,5 @@ http_interactions:
         changes.\r\n\r\n\r\n\r\n## Action Text\r\n\r\n*   No changes.\r\n\r\n\r\n\r\n##
         Railties\r\n\r\n*   No changes."}'
     http_version: null
-  recorded_at: Fri, 14 Feb 2020 18:15:21 GMT
+  recorded_at: Fri, 14 Feb 2020 18:44:09 GMT
 recorded_with: VCR 5.1.0
