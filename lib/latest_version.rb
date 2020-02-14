@@ -7,6 +7,7 @@ Dir[File.expand_path('latest_version/**/*.rb', __dir__)].each(&method(:require))
 
 module LatestVersion
   LIBRARIES = {
+    'python' => Libraries::Python,
     'rails' => Libraries::Rails,
     'ruby' => Libraries::Ruby,
   }.freeze

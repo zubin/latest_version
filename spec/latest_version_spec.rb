@@ -15,6 +15,10 @@ RSpec.describe LatestVersion do
       end
     end
 
+    context "python" do
+      it_behaves_like "returns a MAJOR.MINOR.PATCH version"
+    end
+
     context "rails" do
       it_behaves_like "returns a MAJOR.MINOR.PATCH version"
     end
