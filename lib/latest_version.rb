@@ -14,6 +14,7 @@ module LatestVersion
     },
     rails: -> { latest_github_release(repo: 'rails/rails') },
     ruby: -> { latest_github_tag(repo: 'ruby/ruby').gsub('_', '.') },
+    rust: -> { latest_github_tag(repo: 'rust-lang/rust') },
   }.freeze
   UnknownLibraryError = Class.new(StandardError)
   private_constant :LIBRARIES
@@ -38,6 +39,6 @@ module LatestVersion
   private_class_method def self.latest_github_tag(repo:)
     json = Net::HTTP.get(URI("https://api.github.com/repos/#{repo}/tags"))
     tags = JSON.parse(json, symbolize_names: true)
-    tags.map { |tag| tag.fetch(:name).gsub(/^v/, '') }.reject { |name| name[/beta|preview|rc/] }.max
+    tags.map { |tag| tag.fetch(:name).gsub(/^v/, '') }.reject { |name| name[/[a-z]/i] }.max
   end
 end

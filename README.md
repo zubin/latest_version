@@ -19,6 +19,7 @@ Commands:
   latest_version python          # Returns latest version of python
   latest_version rails           # Returns latest version of rails
   latest_version ruby            # Returns latest version of ruby
+  latest_version rust            # Returns latest version of rust
 ```
 
 ## Contributing
