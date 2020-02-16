@@ -2,6 +2,7 @@
 
 require 'thor'
 require 'latest_version'
+require 'latest_version/completion'
 
 module LatestVersion
   class CLI < Thor
@@ -12,6 +13,14 @@ module LatestVersion
     LatestVersion.supported_libraries.each do |library|
       desc library, "Returns latest version of #{library}"
       define_method(library) { puts LatestVersion.call(library) }
+    end
+
+    desc 'completion SHELL', "Installs shell completion"
+    subcommand 'completion', Completion::Install
+
+    desc 'completions', "Lists supported completions"
+    def completions
+      puts Completion::SUPPORTED.keys.join("\n")
     end
   end
 end

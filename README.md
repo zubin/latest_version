@@ -15,12 +15,14 @@ $ gem install latest_version
 ```sh
 $ latest_version --help
 Commands:
-  latest_version elixir          # Returns latest version of elixir
-  latest_version help [COMMAND]  # Describe available commands or one specific command
-  latest_version python          # Returns latest version of python
-  latest_version rails           # Returns latest version of rails
-  latest_version ruby            # Returns latest version of ruby
-  latest_version rust            # Returns latest version of rust
+  latest_version completion SHELL  # Installs shell completion
+  latest_version completions       # Lists supported completions
+  latest_version elixir            # Returns latest version of elixir
+  latest_version help [COMMAND]    # Describe available commands or one specific command
+  latest_version python            # Returns latest version of python
+  latest_version rails             # Returns latest version of rails
+  latest_version ruby              # Returns latest version of ruby
+  latest_version rust              # Returns latest version of rust
 ```
 
 ## Contributing
