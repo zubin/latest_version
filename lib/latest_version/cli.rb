@@ -11,9 +11,7 @@ module LatestVersion
 
     LatestVersion.supported_libraries.each do |library|
       desc library, "Returns latest version of #{library}"
-      define_method(library) do
-        puts LatestVersion.call(library)
-      end
+      define_method(library) { puts LatestVersion.call(library) }
     end
   end
 end
