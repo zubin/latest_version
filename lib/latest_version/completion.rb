@@ -6,7 +6,7 @@ module LatestVersion
   module Completion
     SOURCE_DIR = File.expand_path('../../completions', __dir__)
     SUPPORTED = Dir[File.join(SOURCE_DIR, 'latest_version.*')].sort.each_with_object({}) do |path, result|
-      result.merge!(File.extname(path)[1..] => path)
+      result.merge!(File.extname(path)[1..-1] => path)
     end
 
     class Install < Thor
