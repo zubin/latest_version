@@ -20,7 +20,7 @@ module LatestVersion
   UnknownLibraryError = Class.new(StandardError)
   private_constant :LIBRARIES
 
-  def self.call(library)
+  def self.of(library)
     LIBRARIES.fetch(library.to_sym) { raise UnknownLibraryError, library }.call
   end
 

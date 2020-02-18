@@ -12,7 +12,7 @@ module LatestVersion
 
     LatestVersion.supported_libraries.each do |library|
       desc library, "Returns latest version of #{library}"
-      define_method(library) { puts LatestVersion.call(library) }
+      define_method(library) { puts LatestVersion.of(library) }
     end
 
     desc 'completion SHELL', "Installs shell completion"
