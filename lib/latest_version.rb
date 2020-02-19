@@ -13,7 +13,7 @@ module LatestVersion
         regex: %r{<p>Latest: <a href="/downloads/release/python-\d+/">Python (\d+\.\d+\.\d+)</a></p>},
       )
     },
-    rails: -> { latest_github_release(repo: 'rails/rails') },
+    rails: -> { of_rubygem('rails') },
     ruby: -> { latest_github_tag(repo: 'ruby/ruby').gsub('_', '.') },
     rust: -> { latest_github_tag(repo: 'rust-lang/rust') },
   }.freeze
@@ -22,6 +22,11 @@ module LatestVersion
 
   def self.of(library)
     LIBRARIES.fetch(library.to_sym) { raise UnknownLibraryError, library }.call
+  end
+
+  def self.of_rubygem(gem_name)
+    json = Net::HTTP.get(URI("https://rubygems.org/api/v1/versions/#{gem_name}/latest.json"))
+    JSON.parse(json, symbolize_names: true).fetch(:version)
   end
 
   def self.supported_libraries
