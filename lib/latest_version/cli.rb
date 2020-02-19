@@ -22,5 +22,10 @@ module LatestVersion
     def completions
       puts Completion::SUPPORTED.keys.join("\n")
     end
+
+    desc 'rubygem GEM_NAME', "Returns latest version of rubygem GEM_NAME"
+    def rubygem(gem_name)
+      puts LatestVersion.of_rubygem(gem_name)
+    end
   end
 end

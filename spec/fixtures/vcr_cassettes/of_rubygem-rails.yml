@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/versions/rails/latest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 06a71da2-bbe6-428a-be7a-e3846fe15225
+      X-Runtime:
+      - '0.011187'
+      Strict-Transport-Security:
+      - max-age=120
+      X-Backend:
+      - F_Rails 54.186.104.15:443
+      Accept-Ranges:
+      - bytes
+      - bytes
+      Date:
+      - Wed, 19 Feb 2020 17:18:09 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '0'
+      X-Served-By:
+      - cache-mel19029-MEL
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1582132689.211858,VS0,VE202
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"e43adeb273fcffed22e91deb35dde9bf"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"version":"6.0.2.1"}'
+    http_version: null
+  recorded_at: Wed, 19 Feb 2020 17:18:09 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/versions/rails/latest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5daf42af-2d82-4341-879b-be96664810a7
+      X-Runtime:
+      - '0.008015'
+      Strict-Transport-Security:
+      - max-age=120
+      X-Backend:
+      - F_Rails 54.186.104.15:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Wed, 19 Feb 2020 17:18:09 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-mel19035-MEL
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1582132690.526657,VS0,VE196
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"e43adeb273fcffed22e91deb35dde9bf"'
+      Server:
+      - RubyGems.org
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"version":"6.0.2.1"}'
+    http_version: null
+  recorded_at: Wed, 19 Feb 2020 17:18:09 GMT
+recorded_with: VCR 5.1.0
