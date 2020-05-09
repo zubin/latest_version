@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-
 _latest_version() {
   COMPREPLY=()
   local word="${COMP_WORDS[COMP_CWORD]}"
